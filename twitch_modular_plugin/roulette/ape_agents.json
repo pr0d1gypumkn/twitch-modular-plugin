@@ -1,0 +1,9 @@
+{"name":"apex legends",
+"roles": [
+    "Assault",
+    "Skirmisher",
+    "Recon",
+    "Controller",
+    "Support"
+],
+"agents":[{"name": "Ash", "role": "Assault", "active": "True"}, {"name": "Ballistic", "role": "Assault", "active": "True"}, {"name": "Bangalore", "role": "Assault", "active": "True"}, {"name": "Fuse", "role": "Assault", "active": "True"}, {"name": "Mad Maggie", "role": "Assault", "active": "True"}, {"name": "Alter", "role": "Skirmisher", "active": "True"}, {"name": "Horizon", "role": "Skirmisher", "active": "True"}, {"name": "Octane", "role": "Skirmisher", "active": "True"}, {"name": "Pathfinder", "role": "Skirmisher", "active": "True"}, {"name": "Revenant", "role": "Skirmisher", "active": "True"}, {"name": "Valkyrie", "role": "Skirmisher", "active": "True"}, {"name": "Wraith", "role": "Skirmisher", "active": "True"}, {"name": "Bloodhound", "role": "Recon", "active": "True"}, {"name": "Crypto", "role": "Recon", "active": "True"}, {"name": "Seer", "role": "Recon", "active": "True"}, {"name": "Vantage", "role": "Recon", "active": "True"}, {"name": "Catalyst", "role": "Controller", "active": "True"}, {"name": "Caustic", "role": "Controller", "active": "True"}, {"name": "Rampart", "role": "Controller", "active": "True"}, {"name": "Wattson", "role": "Controller", "active": "True"}, {"name": "Conduit", "role": "Support", "active": "True"}, {"name": "Gibraltar", "role": "Support", "active": "True"}, {"name": "Lifeline", "role": "Support", "active": "True"}, {"name": "Loba", "role": "Support", "active": "True"}, {"name": "Mirage", "role": "Support", "active": "True"}, {"name": "Newcastle", "role": "Support", "active": "True"}]}

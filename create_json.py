@@ -2,8 +2,8 @@ import json
 
 agents = []
 
-filename = input("Enter the name of the file you want to create or modify: ")
-
+game_name = input("Enter the name of the game file you want to create or modify: ")
+filename = f"{game_name[0:3].lower()}_agents.json"
 
 while True:
     name = input("Enter agent name (or 'q' to quit): ")
@@ -14,9 +14,9 @@ while True:
     active = input("Enter agent active status (True/False): ")
 
     agent = {
-        'name': name,
-        'role': role,
-        'active': active
+        'name': name.lower(),
+        'role': role.lower(),
+        'active': active.lower()
     }
 
 
@@ -30,15 +30,18 @@ if option.lower() == 'y':
     try:
         with open(filename, 'r') as file:
             previous_agents = json.load(file)
+            previous_agents = previous_agents["agents"]
+            agent_names = [agent['name'].lower() for agent in agents]
+            previous_agents = [agent for agent in previous_agents if agent["name"].lower() not in agent_names]
     except FileNotFoundError:
         print("File not found. Creating a new file.")
         pass
     agents.extend(previous_agents)
-    agents = list({v['name']: v for v in agents}.values())
-    # Append agents list to existing JSON file
-    with open(filename, 'w') as file:
-        json.dump(agents, file)
-else:
-    # Write agents list to a new JSON file
-    with open(filename, 'w') as file:
-        json.dump(agents, file)
+roles = list({v['role'].lower(): v for v in agents}.values())
+game_info = {
+    "name": game_name,
+    "roles": [role['role'] for role in roles],
+    "agents": agents
+}
+with open(filename, 'w') as file:
+    json.dump(game_info, file)

@@ -7,15 +7,13 @@ from roulette.roulette_select import Roulette
 characters = [{'name' : "viper"}, {'name' : "breach"}, {'name' : "jett"}]
 # Create your views here.
 class RouletteGetView(APIView):
-    def get(self, request):
+    def get(self, request, game="valorant", num_characters=1):
         # Your logic for the "roulette get" endpoint goes here
         # For example, you can retrieve data from the database or perform some calculations
-        game_name = request.GET.get('game_name') or 'valorant'
-        allowed_roles = request.GET.get('allowed_roles') or None
-        num_characters = request.GET.get('num_characters') or 1
+        allowed_roles = request.GET.getlist('roles') or None
         
         
-        characters = Roulette(game_name, roles=allowed_roles, num_characters=num_characters)
+        characters = Roulette(game, roles=allowed_roles, num_characters=num_characters)
         
         # Assuming you have some data to return as a response
         data = {

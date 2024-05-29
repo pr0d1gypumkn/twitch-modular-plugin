@@ -23,4 +23,8 @@ from roulette.views import RouletteGetView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('roulette/', RouletteGetView.as_view(), name='roulette_get'),
+    path('roulette/<int:num_characters>', RouletteGetView.as_view(), name='roulette_get_num_characters'),
+    path('<game>/roulette/', RouletteGetView.as_view(), name='roulette_get'),
+    path('<game>/roulette/<int:num_characters>', RouletteGetView.as_view(), name='roulette_get_num_characters')
+   
 ]
