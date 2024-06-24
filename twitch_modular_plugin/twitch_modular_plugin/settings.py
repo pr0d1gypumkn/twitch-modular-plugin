@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-)bf+4lps(id=^j0qtp74)jii1om(!u4&!zkcr!v7p$znavix9f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'twitch-ms-backend-f3781f9ffed7.herokuapp.com']
 
 
 # Application definition
